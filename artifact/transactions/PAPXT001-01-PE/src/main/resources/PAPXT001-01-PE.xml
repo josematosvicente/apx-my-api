@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="PAPXT001" application="PAPX" version="01" country="PE" language="ES">
+	<paramsIn>
+		<parameter order="1" name="customerId" mandatory="1" type="String" size="10"/>
+	</paramsIn>
+	<paramsOut>
+		<dto order="1" name="customer" mandatory="0" package="com.bbva.papx.dto.customer.CustomerDTO" artifactId="PAPXC001">
+			<parameter order="1" name="firstName" mandatory="0" type="String" size="60"/>
+			<parameter order="2" name="lastName" mandatory="0" type="String" size="60"/>
+			<parameter order="3" name="customerId" mandatory="1" type="String" size="10"/>
+		</dto>
+	</paramsOut>
+	<description>Transaction to Get a Customer</description>
+</transaction>
