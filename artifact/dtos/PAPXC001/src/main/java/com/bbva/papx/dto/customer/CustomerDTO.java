@@ -14,65 +14,45 @@ public class CustomerDTO extends AbstractDTO {
 	private static final long serialVersionUID = 2931699728946643245L;
 
     // Attributes section for the DTO
-	private String name;
-	private String surname;
+	private String customerId;
+	private String firstName;
+	private String lastName;
 
-	public String getName() {
-		return this.name;
+	public CustomerDTO() {
+		super();
 	}
 
-	public void setName(final String name) {
-		this.name = name;
+	public String getCustomerId() {
+		return customerId;
 	}
 
-	public String getSurname() {
-		return this.surname;
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 
-	public void setSurname(final String surname) {
-		this.surname = surname;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(final Object obj) {
-		if (obj == null) { return false; }
-		if (obj == this) { return true; }
-		if (obj.getClass() != getClass()) {
-			return false;
-		}
-		final CustomerDTO rhs = (CustomerDTO) obj;
-		return new EqualsBuilder().appendSuper(super.equals(obj))
-					.append(name, rhs.name)
-					.append(surname, rhs.surname)
-					.isEquals();
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		return new HashCodeBuilder()
-			.append(this.name)
-			.append(this.surname)
-			.toHashCode();
+	public String getLastName() {
+		return lastName;
 	}
 
-	/*
-	 * It is important to OBFUSCATE the attributes that are sensitive to show in the representation.
-	 * (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
 	@Override
 	public String toString() {
-		return new ToStringBuilder(this)
-			.append("name", name)
-			.append("surname", surname)
-			.toString();
+		final StringBuilder sb = new StringBuilder("CustomerDTO{");
+		sb.append("customerId='").append(customerId).append('\'');
+		sb.append(", firstName='").append(firstName).append('\'');
+		sb.append(", lastName='").append(lastName).append('\'');
+		sb.append('}');
+		return sb.toString();
 	}
 }
