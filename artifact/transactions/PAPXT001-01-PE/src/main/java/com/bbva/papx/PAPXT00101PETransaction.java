@@ -21,7 +21,7 @@ public class PAPXT00101PETransaction extends AbstractPAPXT00101PETransaction {
 		String customerId = this.getCustomerid();
 		LOGGER.debug("CustomerId from Consumer: {}", customerId);
 
-		CustomerDTO customerDB = papxR001.executeGetCustomer(customerId);
+		CustomerDTO customerDB = papxR001.execute(customerId);
 
 		if(customerDB == null){
 			this.setSeverity(Severity.ENR);

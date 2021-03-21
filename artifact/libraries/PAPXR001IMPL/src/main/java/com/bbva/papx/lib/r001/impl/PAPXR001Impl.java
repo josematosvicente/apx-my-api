@@ -10,11 +10,13 @@ public class PAPXR001Impl extends PAPXR001Abstract {
 
 
 	@Override
-	public CustomerDTO executeGetCustomer(String customerId) {
+	public CustomerDTO execute(String customerId) {
 
 		if (customerId == null) {
 			return null;
 		}
+
+		
 
 		//Simulacion de obtencion de un cliente
 		CustomerDTO customerDTO = new CustomerDTO();

@@ -4,6 +4,6 @@ import com.bbva.papx.dto.customer.CustomerDTO;
 
 public interface PAPXR001 {
 
-	CustomerDTO executeGetCustomer(String customerId);
+	CustomerDTO execute(String customerId);
 
 }

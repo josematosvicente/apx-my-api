@@ -17,13 +17,13 @@ public class PAPXR001ImplTest {
 
     @Test
     public void executeGetCustomerNULL() {
-        CustomerDTO customerDTO = papxr001.executeGetCustomer(null);
+        CustomerDTO customerDTO = papxr001.execute(null);
         assertNull(customerDTO);
     }
 
     @Test
     public void executeGetCustomerOK() {
-        CustomerDTO customerDTO = papxr001.executeGetCustomer("123456789");
+        CustomerDTO customerDTO = papxr001.execute("123456789");
         assertNotNull(customerDTO);
     }
 }
